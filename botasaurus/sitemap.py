@@ -77,7 +77,7 @@ def isgzip(url, response):
     url_path = unquote_plus(uri.path)
     content_type = response.headers.get("content-type") or ""
 
-    if url_path.lower().endswith(".gz") or "gzip" in content_type.lower():
+    if "gzip" in content_type.lower():
         return True
 
     else:
